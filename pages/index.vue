@@ -1,5 +1,12 @@
 <script setup lang="ts">
 const youtubeUrl = 'https://www.youtube.com/@ChurchTechCareers'
+const phoneliveUrl = 'https://phonelive.io'
+
+const host = {
+  name: 'Hugh Plappert',
+  title: 'CRO of PhoneLive.io',
+  bio: 'Hugh brings years of experience in church technology and leadership to help you navigate your career path in ministry tech.'
+}
 
 const topics = [
   {
@@ -116,8 +123,33 @@ const topics = [
       </UContainer>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Host Section -->
     <section class="py-20 lg:py-28 bg-gray-100 dark:bg-gray-900">
+      <UContainer>
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Your Host
+          </h2>
+          <div class="mt-8">
+            <div class="w-24 h-24 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mx-auto mb-6">
+              <UIcon name="i-heroicons-user" class="w-12 h-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              {{ host.name }}
+            </h3>
+            <p class="text-primary-600 dark:text-primary-400 font-medium mb-4">
+              <a :href="phoneliveUrl" target="_blank" class="hover:underline">{{ host.title }}</a>
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+              {{ host.bio }}
+            </p>
+          </div>
+        </div>
+      </UContainer>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-28 bg-white dark:bg-gray-950">
       <UContainer>
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
