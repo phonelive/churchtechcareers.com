@@ -84,7 +84,7 @@ jobs:
       - name: Deploy Static Files to S3
         run: |
           cd .output/public
-          aws s3 sync --acl public-read . s3://${{ env.S3_BUCKET }}/ --delete
+          aws s3 sync . s3://${{ env.S3_BUCKET }}/ --delete
 
       - name: Invalidate CloudFront Cache
         run: |
