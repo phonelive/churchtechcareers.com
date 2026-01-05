@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const youtubeUrl = 'https://www.youtube.com/@ChurchTechCareers'
 const phoneliveUrl = 'https://phonelive.io'
+const linkedinUrl = 'https://www.linkedin.com/in/plappert'
 
 const host = {
   name: 'Hugh Plappert',
@@ -140,9 +141,18 @@ const topics = [
             <p class="text-primary-600 dark:text-primary-400 font-medium mb-4">
               <a :href="phoneliveUrl" target="_blank" class="hover:underline">{{ host.title }}</a>
             </p>
-            <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+            <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-6">
               {{ host.bio }}
             </p>
+            <UButton
+              :to="linkedinUrl"
+              target="_blank"
+              icon="i-simple-icons-linkedin"
+              color="gray"
+              variant="soft"
+            >
+              Connect on LinkedIn
+            </UButton>
           </div>
         </div>
       </UContainer>
