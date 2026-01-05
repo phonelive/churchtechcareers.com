@@ -1,11 +1,8 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
   modules: ['@nuxt/ui'],
-  ssr: true,
-  nitro: {
-    preset: 'static'
-  },
+
+  css: ['~/assets/css/main.css'],
+
   app: {
     head: {
       title: 'Church Tech Careers - Your Path to Ministry Through Technology',
@@ -24,18 +21,22 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          async: true,
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-4JLFJZWYT4'
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-4JLFJZWYT4',
+          async: true
         },
         {
-          innerHTML: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-4JLFJZWYT4');
-          `
+          innerHTML: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4JLFJZWYT4');`
         }
       ]
     }
-  }
+  },
+
+  nitro: {
+    preset: 'static'
+  },
+
+  compatibilityDate: '2025-01-04'
 })
